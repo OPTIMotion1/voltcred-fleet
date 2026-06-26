@@ -20,7 +20,9 @@ app.use("/api/positions", positionRoutes);
 app.use("/api/reports", reportsRoutes);
 
 // Serve built frontend in production
-const frontendDist = path.join(__dirname, "../../frontend/dist");
+// On Railway: /app/backend/src/app.js → dist is at /app/frontend/dist
+// __dirname = /app/backend/src, so go up 2 levels then into frontend/dist
+const frontendDist = path.join(__dirname, "..", "..", "frontend", "dist");
 
 if (require("fs").existsSync(frontendDist)) {
   app.use(express.static(frontendDist));
@@ -37,4 +39,6 @@ const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
+  console.log(`Frontend dist path: ${frontendDist}`);
+  console.log(`Frontend dist exists: ${require("fs").existsSync(frontendDist)}`);
 });
