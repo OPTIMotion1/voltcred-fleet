@@ -31,7 +31,7 @@ if (require("fs").existsSync(frontendDist)) {
   });
 } else {
   app.get("/", (req, res) => {
-    res.json({ success: true, message: "VoltCred Fleet Backend Running" });
+    res.json({ success: true, message: "OPTI Traccar Backend Running" });
   });
 }
 

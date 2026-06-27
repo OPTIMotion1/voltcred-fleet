@@ -572,7 +572,7 @@ function SettingsPage() {
         <div className="settings-section panel">
           <h2><Icon name="info" size={16} /> About</h2>
           <div className="about-list">
-            <div className="about-row"><span>App</span><span>VoltCred Fleet</span></div>
+            <div className="about-row"><span>App</span><span>OPTI Traccar</span></div>
             <div className="about-row"><span>Frontend</span><span>React + Vite</span></div>
             <div className="about-row"><span>Backend</span><span>Node.js / Express</span></div>
             <div className="about-row"><span>Tracking</span><span>Traccar (app.voltcred.com)</span></div>
@@ -678,8 +678,8 @@ function App() {
       {/* ── Sidebar ── */}
       <aside className={`sidebar ${sidebarOpen ? "open" : ""}`}>
         <div className="brand">
-          <span className="brand-mark">VC</span>
-          <span className="brand-name">VoltCred Fleet</span>
+          <span className="brand-mark">OT</span>
+          <span className="brand-name">OPTI Traccar</span>
         </div>
         <nav>
           <ul>
